@@ -12,6 +12,7 @@ let searchValue = props.searchValue;
             console.log(props.characterList.filter(item => item.name.toLowerCase().includes(searchValue.toLowerCase())));
           let test = props.characterList.filter(item => item.name.toLowerCase().includes(searchValue.toLowerCase()))
           setCharacterList(test);
+          props.setPageFilter(1);
         } 
         else if (searchValue === '' && JSON.parse(window.localStorage.getItem('rickandmorty') !== null)){
           setCharacterList(JSON.parse(window.localStorage.getItem('rickandmorty')));

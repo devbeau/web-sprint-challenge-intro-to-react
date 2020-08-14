@@ -90,7 +90,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header characterList={characterList} setCharacterList={setCharacterList} searchValue={searchValue} setSearchValue={setSearchValue} setRenderList/>
+      <Header setPageFilter={setPageFilter} characterList={characterList} setCharacterList={setCharacterList} searchValue={searchValue} setSearchValue={setSearchValue} setRenderList/>
       <StyledPages>
         {renderList!==[] && <div onClick={e => pageFilter !== 1 && setPageFilter(pageFilter - 1)}>Previous Page</div>}
         <div>Current Page: {pageFilter}</div>
